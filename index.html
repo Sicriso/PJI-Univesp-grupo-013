@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mão no Arado</title>
-    <link rel="stylesheet" href="PROJETO UNIVESP II/css/style.css">
-
+   
+    
 
 </head>
 <body>
@@ -21,12 +21,57 @@
             box-sizing: border-box;
         }
 
+        input, textarea {
+            border: 2px solid;
+            background-color: beige;
+            color: rgb(37, 24, 214);
+            padding: 2px;
+            margin-bottom: 24px;
+            font-size: 2rem;
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+      
+        input:focus-visible, textarea:focus-visible {
+            outline: none;
+            border-color: black;
+        }
+
 
         header {
             min-height: 850px;
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        .section-texts {
+            background-position: top;
+            
+        }
+
+
+        #tamanho {
+            font-size: 20px;
+        }
+
+        .familia {
+            
+            padding: 100px;
+            text-align: center;
+    
+        }
+
+        .titulo {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .projetos{
+            padding: 100px;
+            text-align: center;
         }
 
         section {
@@ -82,24 +127,74 @@
             color: #ca8f17;
         }
 
+       #section-form .form-content h3 {
+        flex-basis: 30%;
+        text-align: left;
+        margin: 0;
+       }
+
+       #section-form .form-container {
+        flex-basis: 100%;
+        position: relative;
+       }
+
+       #section-form .form-container::after {
+        content: "";
+        background-color: rgb(24, 111, 193);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        z-index: -1;
+       }
+
+       #section-form .form-container form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 24%;
+        border-color: rgb(123, 123, 230);
+        color: azure;
+        text-align: left;
+       }
+       #section-form .form-container form button {
+        border: none;
+        background-color:blanchedalmond;
+        color: rgb(54, 20, 192);
+        max-width: 300px;
+        align-self: center;
+       }
+
+       #section-form .form-container form button:hover {
+        background-color: azure;
+        color: rgb(28, 28, 188);
+       }
+        
     </style>
+
+
+           
 
 
     <main>
 
-        <section id="logo-mao-no-arado" class="container">
+        <section id="logo-mao-no-arado" class="logo">
+
+           
 
             <div class="section-texts">
 
                
+                
+                    <img width="450" height="500" 
+                    class="logo"
+                    src="C:\Users\Simone\PJI Univesp-grupo-013\img\Logo Mão no Arado.png" 
+                    alt="Imagem de uma família que fundou a Mão no Arado">
+                
 
-                <img width="450" height="500" 
-                class="invert-element"
-                src="C:\Users\Simone\PJI Univesp-grupo-013\img\Logo Mão no Arado.png" 
-                alt="Imagem de uma família que fundou a Mão no Arado">
-
-                <h2>Família Mão no Arado</h2> <br>
-                    <p role="text">
+                <h2 class="titulo">Família Mão no Arado</h2> <br>
+                    <p id="tamanho" role="text" class="familia">
                         A Associação Mão no Arado é uma Organização da Sociedade Civil (OSC) fundada em dezembro de 1998, a partir 
                         da iniciativa de uma família engajada em ações comunitárias no bairro de Itaquera, 
                         na zona leste de São Paulo. <br>
@@ -125,9 +220,9 @@
 
             <div class="section-texts">
 
-                    <h2>Na Ginga do Berimbau</h2> <br><br>
+                    <h2 id="tamanho" class="familia">Na Ginga do Berimbau</h2><br>
 
-                    <p role="text">
+                    <p role="text" class="titulo">
                         É uma oficina gratuita onde é resgatado as raízes africanas.
                     </p>
             </div>
@@ -165,7 +260,7 @@
         <section>
             <div class="container section-texts">
 
-                <h2> Projetos realizados pela Mão no Arado.</h2> <br><br>
+                <h2 id="tamanho" class="projetos"> Projetos realizados pela Mão no Arado.</h2><br>
 
                 <ul class="gallary-container" role="gallery">
 
@@ -210,8 +305,9 @@
         </section>
             <section id="section-form" class="container">
 
-                <h2>Informações sobre oficinas com inscrições abertas.</h2>
-                <p>
+                <h2 class="titulo">Informações sobre oficinas com inscrições abertas.</h2>
+
+                <p id="tamanho">
                     Para saber mais informações de datas e horários das oficinas
                     que estarão com inscrições abertas, deixe o seu cadastro para que
                     possamos enviar o nosso material.
@@ -219,7 +315,7 @@
 
                 <div class="form-content">
 
-                    <h2><span>Cadastre-se no formulário abaixo:</span></h2>
+                    <h2 class="familia"><span>Cadastre-se no formulário abaixo:</span></h2>
                 </div>
                 <div class="form-container">
                     <form>
@@ -231,9 +327,7 @@
     
                         <label for="txtContato">Telefone com DDD</label>
                         <input type="contato" name="contato" id="txtContato">
-    
-                        <label for="txtCharacter">Personagem</label>
-                        <textarea name="character" cols="30" rows="10" id="txtCharacter"></textarea>
+
     
                         <button type="button" id="btnSubscribe">Me inscrever</button>
     
@@ -246,14 +340,14 @@
     </main>
 
     <footer>
-        <p>
-            Temos a missão de sermos chamados de Mão no Arado porque são mãos que cuida, mãos que alimenta, 
-            mãos que transformam mãos que empondera, mãos que não solta quando tem o objetivo de vencer.
+        <p id="tamanho" class="familia">
+            "Temos a missão de sermos chamados de Mão no Arado porque são mãos que cuidam, mãos que alimentam, 
+            mãos que transformam mãos que emponderam, mãos que não soltam quando tem o objetivo de vencer."
 
         </p>
 
             <img src="C:Users\Simone\PJI Univesp-grupo-013\img\mãos laranjas.png" alt="Imagem de duas mãos laranjas com as palmas para frente">
-            <p>
+            <p id="tamanho" class="familia">
                 Quer saber mais sobre o nosso trabalho? Clique no link e descubra!!! <br> <br>
 
                https://www.instagram.com/associacaomaonoarado/
